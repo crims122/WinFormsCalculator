@@ -10,8 +10,6 @@ namespace MyCalculator
         }
 
         int num1, num2, result;
-        List<int> nums = new();
-        List<String> options = new();
         string option;
 
         private void btn1_Click(object sender, EventArgs e)
