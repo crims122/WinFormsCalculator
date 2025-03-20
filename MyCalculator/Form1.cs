@@ -9,7 +9,9 @@ namespace MyCalculator
             InitializeComponent();
         }
 
-        double num1, num2, result;
+        int num1, num2, result;
+        List<int> nums = new();
+        List<String> options = new();
         string option;
 
         private void btn1_Click(object sender, EventArgs e)
@@ -65,45 +67,45 @@ namespace MyCalculator
         private void plusBtn_Click(object sender, EventArgs e)
         {
             option = "+";
-            num1 = double.Parse(txtTotal.Text);
+            num1 = txtTotal.Text != String.Empty ? int.Parse(txtTotal.Text) : 0;
             txtTotal.Clear();
         }
 
         private void minusBtn_Click(object sender, EventArgs e)
         {
             option = "-";
-            num1 = double.Parse(txtTotal.Text);
+            num1 = txtTotal.Text != String.Empty ? int.Parse(txtTotal.Text) : 0;
             txtTotal.Clear();
         }
 
         private void multiplyBtn_Click(object sender, EventArgs e)
         {
             option = "*";
-            num1 = double.Parse(txtTotal.Text);
+            num1 = txtTotal.Text != String.Empty ? int.Parse(txtTotal.Text) : 0;
             txtTotal.Clear();
         }
 
         private void divideBtn_Click(object sender, EventArgs e)
         {
             option = "/";
-            num1 = double.Parse(txtTotal.Text);
+            num1 = txtTotal.Text != String.Empty ? int.Parse(txtTotal.Text) : 0;
             txtTotal.Clear();
 
         }
 
         private void clearBtn_Click(object sender, EventArgs e)
         {
-            txtTotal.Text = string.Empty;
+            txtTotal.Text = String.Empty;
         }
 
         private void equalsBtn_Click(object sender, EventArgs e)
         {
-            num2 = double.Parse(txtTotal.Text);
+            num2 = txtTotal.Text != String.Empty ? int.Parse(txtTotal.Text) : 0;
             if (option.Equals("+")) { result = num1 + num2; }
             if (option.Equals("-")) { result = num1 - num2; }
             if (option.Equals("*")) { result = num1 * num2; }
             if (option.Equals("/")) { result = num1 / num2; }
-
+            Console.WriteLine(int.MaxValue);
             txtTotal.Clear();
             txtTotal.Text += result;
         }
