@@ -98,6 +98,7 @@ namespace MyCalculator
 
         private void equalsBtn_Click(object sender, EventArgs e)
         {
+            num2 = double.Parse(txtTotal.Text);
             if (option.Equals("+")) { result = num1 + num2; }
             if (option.Equals("-")) { result = num1 - num2; }
             if (option.Equals("*")) { result = num1 * num2; }
