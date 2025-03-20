@@ -1,1 +1,1 @@
-Simple calculator app made in WinForms                                                          Version .NET 8
+Simple calculator app made in WinForms ---------- Version .NET 8
